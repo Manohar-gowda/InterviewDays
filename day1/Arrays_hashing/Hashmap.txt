@@ -1,0 +1,43 @@
+--> Hashmap: is a Java collection that stores data as a key-value pairs
+ Map<String, Integer> map = new HashMap<>();
+
+    map.put("Java", 90);
+    map.put("python", 80);
+    map.put("SQL", 85);
+
+  - Imports: 
+     * import java.util.HashMap;
+     * import java.util.Map;
+  - It preferred to declare the variables as Map rather than HashMap, because it programs to the interface.
+    Note: Study both interface and wrapped class (Ex: Integer, Long etc).
+
+  - Implementation:
+    * In java this is internally implemented using array of linked list.
+  - Why it is fast??
+    * Hashmap uses hashing mechanism.
+    * Instead of searching every key one by one, it calculates a hash for the key and uses that to determine where the entry should be stored.
+  Conceptually:
+    Key -> hashCode() -> hash -> bucket/index -> value
+  
+  Operations are: * put(), get(), remove(), containsKey()  are O(1) average case.
+
+ 1. put():
+    Adds or updates a key-value pair.
+      Map<String, Integer> map = new HashMap<>();
+      map.put("India", 180);
+      map.put("China", 200);
+      map.put("Nepal", 20);
+
+    If key already exists:
+       map.put("Nepal", 22);
+
+    Then old value is replaced.
+    Ex: 
+    Before: 
+           "Nepal" -> 20
+    Now:
+           "Nepal" -> 22       
+
+
+
+
